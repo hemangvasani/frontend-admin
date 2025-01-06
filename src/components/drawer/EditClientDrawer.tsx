@@ -31,6 +31,7 @@ import {
 } from "../../store/ourclients/ourclientssActionTypes";
 import { useOurClientsMaster } from "../../store/ourclients/reducer";
 import { FormField } from "../form/formField/FormField";
+import FormEditor from "../form/formField/FormEditor";
 
 interface Props {
   clientmain?: any;
@@ -1024,7 +1025,7 @@ const EditClientDrawer: React.FC<Props> = ({ clientmain, isOpen, onClose }) => {
                 </FormControl>
 
                 <FormControl pb={3}>
-                  <FormField
+                  {/* <FormField
                     required={true}
                     name="Description : "
                     fieldName="aboutdescription"
@@ -1035,6 +1036,12 @@ const EditClientDrawer: React.FC<Props> = ({ clientmain, isOpen, onClose }) => {
                         ? (errors.aboutdescription as string)
                         : undefined
                     }
+                  /> */}
+                  <FormEditor
+                    required={true}
+                    name="Description : "
+                    fieldName="aboutdescription"
+                    filedValue={values.aboutdescription}
                   />
                 </FormControl>
                 <Divider
@@ -1175,7 +1182,7 @@ const EditClientDrawer: React.FC<Props> = ({ clientmain, isOpen, onClose }) => {
                 </FormControl>
 
                 <FormControl pb={3}>
-                  <FormField
+                  {/* <FormField
                     required={true}
                     name="Description : "
                     fieldName="problemdescription"
@@ -1186,6 +1193,12 @@ const EditClientDrawer: React.FC<Props> = ({ clientmain, isOpen, onClose }) => {
                         ? (errors.problemdescription as string)
                         : undefined
                     }
+                  /> */}
+                  <FormEditor
+                    required={true}
+                    name="Description : "
+                    fieldName="problemdescription"
+                    filedValue={values.problemdescription}
                   />
                 </FormControl>
                 <Divider
@@ -1219,7 +1232,7 @@ const EditClientDrawer: React.FC<Props> = ({ clientmain, isOpen, onClose }) => {
                   </FormControl>
 
                   <FormControl pb={3}>
-                    <FormField
+                    {/* <FormField
                       required={true}
                       name="Description : "
                       fieldName="solutiondescription"
@@ -1230,6 +1243,12 @@ const EditClientDrawer: React.FC<Props> = ({ clientmain, isOpen, onClose }) => {
                           ? (errors.solutiondescription as string)
                           : undefined
                       }
+                    /> */}
+                    <FormEditor
+                      required={true}
+                      name="Description : "
+                      fieldName="solutiondescription"
+                      filedValue={values.solutiondescription}
                     />
                   </FormControl>
                   {/* <FormControl pb={3}>
@@ -1589,7 +1608,9 @@ const EditClientDrawer: React.FC<Props> = ({ clientmain, isOpen, onClose }) => {
                         position="relative"
                       >
                         <Text fontWeight="bold">{other.heading}: </Text>
-                        <Text>{other.title}</Text>
+                        <Text
+                          dangerouslySetInnerHTML={{ __html: other.title }}
+                        />
                         {editState.section === "addSolution" &&
                           editState.index === index && (
                             <Box
@@ -1692,7 +1713,7 @@ const EditClientDrawer: React.FC<Props> = ({ clientmain, isOpen, onClose }) => {
                   </FormControl>
 
                   <FormControl pb={3}>
-                    <FormField
+                    {/* <FormField
                       required={true}
                       name="Description : "
                       fieldName="processdescription"
@@ -1703,6 +1724,12 @@ const EditClientDrawer: React.FC<Props> = ({ clientmain, isOpen, onClose }) => {
                           ? (errors.processdescription as string)
                           : undefined
                       }
+                    /> */}
+                    <FormEditor
+                      required={true}
+                      name="Description : "
+                      fieldName="processdescription"
+                      filedValue={values.processdescription}
                     />
                   </FormControl>
 
@@ -1890,7 +1917,7 @@ const EditClientDrawer: React.FC<Props> = ({ clientmain, isOpen, onClose }) => {
                 </FormControl>
 
                 <FormControl pb={3}>
-                  <FormField
+                  {/* <FormField
                     required={true}
                     name="Description : "
                     fieldName="outcomedescription"
@@ -1901,6 +1928,12 @@ const EditClientDrawer: React.FC<Props> = ({ clientmain, isOpen, onClose }) => {
                         ? (errors.outcomedescription as string)
                         : undefined
                     }
+                  /> */}
+                  <FormEditor
+                    required={true}
+                    name="Description : "
+                    fieldName="outcomedescription"
+                    filedValue={values.outcomedescription}
                   />
                 </FormControl>
 
@@ -1984,7 +2017,7 @@ const EditClientDrawer: React.FC<Props> = ({ clientmain, isOpen, onClose }) => {
                   />
                 </FormControl>
                 <FormControl pb={3}>
-                  <FormField
+                  {/* <FormField
                     required={true}
                     name="Description : "
                     fieldName="calldescription"
@@ -1995,6 +2028,12 @@ const EditClientDrawer: React.FC<Props> = ({ clientmain, isOpen, onClose }) => {
                         ? (errors.calldescription as string)
                         : undefined
                     }
+                  /> */}
+                  <FormEditor
+                    required={true}
+                    name="Description : "
+                    fieldName="calldescription"
+                    filedValue={values.calldescription}
                   />
                 </FormControl>
                 <FormControl pb={3}>

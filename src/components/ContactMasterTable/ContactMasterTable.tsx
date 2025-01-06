@@ -319,7 +319,10 @@ const ContactMasterTable: React.FC = () => {
                 >
                   About:
                 </h3>
-                <p style={{ width: "90%" }}>{aboutData?.aboutus}</p>
+                <p
+                  style={{ width: "90%" }}
+                  dangerouslySetInnerHTML={{ __html: aboutData?.aboutus }}
+                />
               </Flex>
             </div>
           </div>
